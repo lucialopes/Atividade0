@@ -1,24 +1,56 @@
 package Questao8;
 
 import java.util.ArrayList;
+
+
 import java.util.Scanner;
 
 public class principal {
-	public static void main(String[] args) {
-
-		Scanner sc = new Scanner(System.in);
-		ArrayList palavras = new ArrayList<String>();
-		System.out.println(" Informe a palavra");
-		palavras.add(sc.nextLine());
-		int cont = 0;
-		String test;
-		test = sc.nextLine();
-		while (!(test.equals(palavras.get(cont)))) {
-			palavras.add(test);
-			cont++;
+	
+	public static int maiorString(ArrayList<String> listaDeString){
+		int tam = 0;
+		for (int i = 0; i < listaDeString.size(); i++) {
+			if (listaDeString.get(i).length() > tam)
+				tam = listaDeString.get(i).length();
 		}
-
-		System.out.println("paro");
+		
+		return tam; // retorna o tamanho da palavra
 	}
 
-}
+	public static String concatenar(ArrayList<String> listaDeString){
+		String auxiliar = new String();
+		for (int i = 0; i < listaDeString.size(); i++) {
+			auxiliar = auxiliar + listaDeString.get(i);
+		}
+		return auxiliar; // concatenando Strings
+	}
+	
+	
+	public static void main(String[] args) {
+
+		int maiorString;
+		String teste = null;
+		Scanner sc = new Scanner(System.in);
+		ArrayList<String> listaDeString = new ArrayList<String>();
+		
+		System.out.println("Digite a primeira palavra :");
+		listaDeString.add(sc.next());
+		
+		teste = sc.next();
+		while(!(listaDeString.get(listaDeString.size()-1).equals(teste))){
+			listaDeString.add(teste);
+			teste = sc.next();
+		}
+		
+		System.out.println(" Strings validas: " + listaDeString.size());
+		System.out.println("Maior String: " + maiorString(listaDeString));
+		System.out.println("Concatenação Strings: " + concatenar(listaDeString));
+				
+	}
+
+		}
+
+		
+	
+
+

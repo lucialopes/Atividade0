@@ -2,23 +2,31 @@ package Questao5;
 
 public class Circulo implements FormaGeometrica {
 
-	       static final float PI = (float) 3.14;
-			public double raio;
-			
-			public Circulo() {
-				this.raio = 5;
-			}
-			 public double getArea() {
-				 return this.raio * PI;
-			 }
-			public void getPerímetro() {
-				// TODO Auto-generated method stub
-				
-			}
-			public void desenhar() {
-				// TODO Auto-generated method stub
-				
-			}
+	private final double pi = 3.14;
+	private double raio;
+
+	
+	public double getArea() {
+		
+		return pi*raio*raio;
+	}
+
+	public double getPerimetro() {
+		return 2*pi*raio;
+	}
+
+	public void Desenhar() {
+		System.out.println("Desenho de um circulo!");
+
+	}
+
+	public double getRaio() {
+		return raio;
+	}
+
+	public void setRaio(double raio) {
+		this.raio = raio;
+	}
 			
 
 

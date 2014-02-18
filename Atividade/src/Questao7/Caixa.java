@@ -4,17 +4,18 @@ import java.util.ArrayList;
 
 public class Caixa {
 	
-	static ArrayList<String> filaDeEspera = new ArrayList<String> ();
+	static ArrayList<String> filaEspera = new ArrayList<String> ();
 	
 
 	public void proximo(){
-		ArrayList<String> a = new ArrayList<String> ();
-		for(int i=1;i<filaDeEspera.size();i++)
-			a.add(filaDeEspera.get(i));
+		ArrayList<String> a1 = new ArrayList<String> ();
+		for(int i=1;i<filaEspera.size();i++)
+			a1.add(filaEspera.get(i));
 	   }
-
+         
 
  }
+
 
 
 

@@ -2,25 +2,38 @@ package Questao5;
 
 public class Retangulo implements FormaGeometrica {
 
-	  public double largura;
-	  public double altura;
-	  
-	public Retangulo() {
-	   this.largura = 9;
-		this.altura = 2;
-    }
+	private double base;
+	private double altura;
+	
 	public double getArea() {
-	    return this.largura * this.altura;
-	  }
-
-	public void getPerímetro() {
 		// TODO Auto-generated method stub
-		
+		return base * altura;
 	}
 
-	public void desenhar() {
+	public double getPerimetro() {
 		// TODO Auto-generated method stub
-		
+		return 2*(base+altura);
+	}
+
+	public void Desenhar() {
+		// TODO Auto-generated method stub
+		System.out.println("Desenho de um retangulo!");
+	}
+
+	public double getBase() {
+		return base;
+	}
+
+	public void setBase(double base) {
+		this.base = base;
+	}
+
+	public double getAltura() {
+		return altura;
+	}
+
+	public void setAltura(double altura) {
+		this.altura = altura;
 	}
 
 	
