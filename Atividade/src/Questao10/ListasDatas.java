@@ -3,11 +3,11 @@ package Questao10;
 public class ListasDatas {
 	String [] listaDatas = new String[5];
 
-	public String[] AumentarArray(String[] listap) {
-		int tam = 2 * listap.length;
+	public String[] AumentarArray(String[] listapa) {
+		int tam = 2 * listapa.length;
 		String[] aux = new String[tam];
-		for (int i = 0; i < listap.length; i++) {
-			aux[i] = listap[i];
+		for (int i = 0; i < listapa.length; i++) {
+			aux[i] = listapa[i];
 		}
 
 		return aux;
