@@ -32,8 +32,14 @@ public class Contador {
 		return false;
 		
 		}
+	}
+		
+		public String toString() {
+			return 	"\nContato:" +
+					"valor: " + getValor();		
+		}
     }
 
 	
 
-}
+

@@ -28,7 +28,10 @@ public class Circulo implements FormaGeometrica {
 		this.raio = raio;
 	}
 			
-
+	public String toString() {
+		return 	"\nCirculo:" +
+				"raio: " + getRaio(); 
+	}
 
 }
 

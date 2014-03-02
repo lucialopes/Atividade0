@@ -64,6 +64,78 @@ public class email {
 	}
 		}
 	}
+	
+	public int hashcode() {
+final int entrada=20;
+int hash = 5;
+hash = entrada * hash + (getEndOrigem() != null ? getEndOrigem().hashCode() : 0);
+hash = entrada * hash + (getEndDestino() != null ? getEndDestino().hashCode() : 0);
+hash = entrada * hash + (getMensagem() != null ? getMensagem().hashCode() : 0);
+hash = entrada * hash + (getAnexo1() != null ? getAnexo1().hashCode() : 0);
+hash = entrada * hash + (getAnexo2() != null ? getAnexo2().hashCode() : 0);
+hash = entrada * hash + (getAnexo3() != null ? getAnexo3().hashCode() : 0);
+
+return hash;
+
+}
+
+public boolean equals(Object obj) {
+
+if (obj == null) {
+return false;
+}
+
+if (!(obj instanceof email)) {
+return false;
+}
+
+final email email = (email) obj;
+
+if (getEndOrigem() == null)
+return false;
+
+if (getEndDestino() == null)
+return false;
+
+if (getMensagem() == null)
+return false;
+
+if (getData() == null)
+return false;
+
+if (getAnexo1() == null)
+return false;
+
+if (getAnexo2() == null)
+return false;
+
+if (getAnexo3() == null)
+return false;
+
+if (!getEndOrigem().equals(email.getEndOrigem()))
+return false;
+
+if (!getEndDestino().equals(email.getEndDestino()))
+return false;
+
+if (!getAnexo1().equals(email.getAnexo1()))
+return false;
+
+if (!getAnexo2().equals(email.getAnexo2()))
+return false;
+
+if (!getAnexo3().equals(email.getAnexo3()))
+return false;
+
+return getMensagem().equals(email.getMensagem());
+
+}
+
+public String toString() {
+
+return super.toString();
+
+}
 	}
 	
 
